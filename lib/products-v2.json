@@ -42,12 +42,12 @@
       "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
       "basePrice": 85,
       "baseSalePrice": 59,
-      "color": "black",
-      "sleeveLength": "short",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+      "color": "White",
+      "sleeveLength": "Long",
+      "image": "/images/White_MD_Shirt.png",
       "images": [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-        "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80"
+        "/images/White_MD_Shirt.png",
+        "/images/White_MD_Shirt.png"
       ],
       "soldOut": false,
       "stock": 25
@@ -68,157 +68,13 @@
       "baseSalePrice": 59,
       "color": "black",
       "sleeveLength": "long",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+      "image": "/images/Black_MD_Shirt.png",
       "images": [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-        "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80"
+        "/images/Black_MD_Shirt.png",
+        "/images/Black_MD_Shirt.png"
       ],
       "soldOut": false,
       "stock": 18
-    },
-    {
-      "id": "shirt-3",
-      "baseId": "shirt-base-1",
-      "category": "shirts",
-      "baseName": "OVERSIZED BASIC TEE",
-      "description": "Essential oversized t-shirt in premium cotton. Perfect for layering or as a standalone piece.",
-      "features": ["100% PREMIUM COTTON", "OVERSIZED FIT", "SCREEN PRINTED LOGO", "REINFORCED SEAMS"],
-      "modelHeight": "6'0\"",
-      "modelSize": "L",
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "shippingDays": "5-7 DAYS",
-      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
-      "basePrice": 85,
-      "baseSalePrice": 59,
-      "color": "white",
-      "sleeveLength": "short",
-      "image": "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80",
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80"
-      ],
-      "soldOut": false,
-      "stock": 30
-    },
-    {
-      "id": "shirt-4",
-      "baseId": "shirt-base-1",
-      "category": "shirts",
-      "baseName": "OVERSIZED BASIC TEE",
-      "description": "Essential oversized t-shirt in premium cotton. Perfect for layering or as a standalone piece.",
-      "features": ["100% PREMIUM COTTON", "OVERSIZED FIT", "SCREEN PRINTED LOGO", "REINFORCED SEAMS"],
-      "modelHeight": "6'0\"",
-      "modelSize": "L",
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "shippingDays": "5-7 DAYS",
-      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
-      "basePrice": 85,
-      "baseSalePrice": 59,
-      "color": "white",
-      "sleeveLength": "long",
-      "image": "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80",
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80"
-      ],
-      "soldOut": false,
-      "stock": 22
-    },
-    {
-      "id": "shirt-5",
-      "baseId": "shirt-base-1",
-      "category": "shirts",
-      "baseName": "OVERSIZED BASIC TEE",
-      "description": "Essential oversized t-shirt in premium cotton. Perfect for layering or as a standalone piece.",
-      "features": ["100% PREMIUM COTTON", "OVERSIZED FIT", "SCREEN PRINTED LOGO", "REINFORCED SEAMS"],
-      "modelHeight": "6'0\"",
-      "modelSize": "L",
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "shippingDays": "5-7 DAYS",
-      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
-      "basePrice": 85,
-      "baseSalePrice": 59,
-      "color": "red",
-      "sleeveLength": "short",
-      "image": "https://images.unsplash.com/photo-1543163521-9effa103ea29?w=800&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1543163521-9effa103ea29?w=800&q=80",
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80"
-      ],
-      "soldOut": false,
-      "stock": 15
-    },
-    {
-      "id": "shirt-6",
-      "baseId": "shirt-base-1",
-      "category": "shirts",
-      "baseName": "OVERSIZED BASIC TEE",
-      "description": "Essential oversized t-shirt in premium cotton. Perfect for layering or as a standalone piece.",
-      "features": ["100% PREMIUM COTTON", "OVERSIZED FIT", "SCREEN PRINTED LOGO", "REINFORCED SEAMS"],
-      "modelHeight": "6'0\"",
-      "modelSize": "L",
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "shippingDays": "5-7 DAYS",
-      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
-      "basePrice": 85,
-      "baseSalePrice": 59,
-      "color": "red",
-      "sleeveLength": "long",
-      "image": "https://images.unsplash.com/photo-1543163521-9effa103ea29?w=800&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1543163521-9effa103ea29?w=800&q=80",
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80"
-      ],
-      "soldOut": false,
-      "stock": 12
-    },
-    {
-      "id": "shirt-7",
-      "baseId": "shirt-base-1",
-      "category": "shirts",
-      "baseName": "OVERSIZED BASIC TEE",
-      "description": "Essential oversized t-shirt in premium cotton. Perfect for layering or as a standalone piece.",
-      "features": ["100% PREMIUM COTTON", "OVERSIZED FIT", "SCREEN PRINTED LOGO", "REINFORCED SEAMS"],
-      "modelHeight": "6'0\"",
-      "modelSize": "L",
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "shippingDays": "5-7 DAYS",
-      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
-      "basePrice": 85,
-      "baseSalePrice": 59,
-      "color": "blue",
-      "sleeveLength": "short",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-        "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80"
-      ],
-      "soldOut": true,
-      "stock": 0
-    },
-    {
-      "id": "shirt-8",
-      "baseId": "shirt-base-1",
-      "category": "shirts",
-      "baseName": "OVERSIZED BASIC TEE",
-      "description": "Essential oversized t-shirt in premium cotton. Perfect for layering or as a standalone piece.",
-      "features": ["100% PREMIUM COTTON", "OVERSIZED FIT", "SCREEN PRINTED LOGO", "REINFORCED SEAMS"],
-      "modelHeight": "6'0\"",
-      "modelSize": "L",
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "shippingDays": "5-7 DAYS",
-      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
-      "basePrice": 85,
-      "baseSalePrice": 59,
-      "color": "blue",
-      "sleeveLength": "long",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-        "https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80"
-      ],
-      "soldOut": false,
-      "stock": 20
     },
     {
       "id": "cap-1",
@@ -234,12 +90,12 @@
       "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
       "basePrice": 45,
       "baseSalePrice": 35,
-      "color": "black",
+      "color": "Arctic blue",
       "capType": "face",
-      "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
+      "image": "/images/artic_blue_cap_MD.png",
       "images": [
-        "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
-        "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80"
+        "/images/artic_blue_cap_MD.png",
+        "/images/artic_blue_cap_MD.png"
       ],
       "soldOut": false,
       "stock": 40
@@ -258,12 +114,12 @@
       "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
       "basePrice": 45,
       "baseSalePrice": 35,
-      "color": "white",
+      "color": "Navy blue",
       "capType": "face",
-      "image": "https://images.unsplash.com/photo-1611168619292-7ac6101cae35?w=800&q=80",
+      "image": "/images/Navy_blue_cap.png",
       "images": [
-        "https://images.unsplash.com/photo-1611168619292-7ac6101cae35?w=800&q=80",
-        "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80"
+        "/images/Navy_blue_cap.png",
+        "/images/Navy_blue_cap.png"
       ],
       "soldOut": false,
       "stock": 35
@@ -284,10 +140,10 @@
       "baseSalePrice": 35,
       "color": "red",
       "capType": "face",
-      "image": "https://images.unsplash.com/photo-1556821552-17c531949862?w=800&q=80",
+      "image": "/images/red_cap.png",
       "images": [
-        "https://images.unsplash.com/photo-1556821552-17c531949862?w=800&q=80",
-        "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80"
+        "/images/red_cap.png",
+        "/images/red_cap.png"
       ],
       "soldOut": false,
       "stock": 28
@@ -306,18 +162,90 @@
       "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
       "basePrice": 45,
       "baseSalePrice": 35,
-      "color": "navy",
+      "color": "Olive green",
       "capType": "face",
-      "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
+      "image": "/images/Olive_green_cap.png",
       "images": [
-        "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
-        "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80"
+        "/images/Olive_green_cap.png",
+        "/images/Olive_green_cap.png"
       ],
-      "soldOut": true,
-      "stock": 0
+      "soldOut": false,
+      "stock": 28
     },
     {
       "id": "cap-5",
+      "baseId": "cap-base-1",
+      "category": "caps",
+      "baseName": "STREET CAP",
+      "description": "Classic baseball cap with embroidered logo. Adjustable back closure for perfect fit.",
+      "features": ["ADJUSTABLE CLOSURE", "EMBROIDERED LOGO", "CURVED BILL", "UNSTRUCTURED"],
+      "modelHeight": "6'0\"",
+      "modelSize": "ONE SIZE",
+      "sizes": ["ONE SIZE"],
+      "shippingDays": "5-7 DAYS",
+      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
+      "basePrice": 45,
+      "baseSalePrice": 35,
+      "color": "pink",
+      "capType": "face",
+      "image": "/images/Pink_cap.png",
+      "images": [
+        "/images/Pink_cap.png",
+        "/images/Pink_cap.png"
+      ],
+      "soldOut": false,
+      "stock": 28
+    },
+    {
+      "id": "cap-6",
+      "baseId": "cap-base-1",
+      "category": "caps",
+      "baseName": "STREET CAP",
+      "description": "Classic baseball cap with embroidered logo. Adjustable back closure for perfect fit.",
+      "features": ["ADJUSTABLE CLOSURE", "EMBROIDERED LOGO", "CURVED BILL", "UNSTRUCTURED"],
+      "modelHeight": "6'0\"",
+      "modelSize": "ONE SIZE",
+      "sizes": ["ONE SIZE"],
+      "shippingDays": "5-7 DAYS",
+      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
+      "basePrice": 45,
+      "baseSalePrice": 35,
+      "color": "Black",
+      "capType": "face",
+      "image": "/images/Full_black_cap.png",
+      "images": [
+        "/images/Full_black_cap.png",
+        "/images/Full_black_cap.png"
+      ],
+      "soldOut": false,
+      "stock": 28
+    },
+    {
+      "id": "cap-7",
+      "baseId": "cap-base-1",
+      "category": "caps",
+      "baseName": "STREET CAP",
+      "description": "Classic baseball cap with embroidered logo. Adjustable back closure for perfect fit.",
+      "features": ["ADJUSTABLE CLOSURE", "EMBROIDERED LOGO", "CURVED BILL", "UNSTRUCTURED"],
+      "modelHeight": "6'0\"",
+      "modelSize": "ONE SIZE",
+      "sizes": ["ONE SIZE"],
+      "shippingDays": "5-7 DAYS",
+      "shippingInfo": "Free domestic shipping on orders over $100. Standard shipping 5-7 business days.",
+      "basePrice": 45,
+      "baseSalePrice": 35,
+      "color": "white",
+      "capType": "face",
+      "image": "/images/white_black_cap.png",
+      "images": [
+        "/images/white_black_cap.png",
+        "/images/white_black_cap.png"
+      ],
+      "soldOut": false,
+      "stock": 28
+    },
+    {
+      "id": "cap-8",
       "baseId": "cap-base-2",
       "category": "caps",
       "baseName": "SKULL CAP",
@@ -332,16 +260,16 @@
       "baseSalePrice": 32,
       "color": "black",
       "capType": "skull",
-      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
+      "image": "/images/skull_cap_black.jpg",
       "images": [
-        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
-        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80"
+        "/images/skull_cap_black.jpg",
+        "/images/skull_caps.jpg"
       ],
       "soldOut": false,
       "stock": 32
     },
     {
-      "id": "cap-6",
+      "id": "cap-9",
       "baseId": "cap-base-2",
       "category": "caps",
       "baseName": "SKULL CAP",
@@ -356,16 +284,16 @@
       "baseSalePrice": 32,
       "color": "gray",
       "capType": "skull",
-      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
+      "image": "/images/skull_cap_grey.jpg",
       "images": [
-        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
-        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80"
+        "/images/skull_cap_grey.jpg",
+        "/images/skull_caps.jpg"
       ],
       "soldOut": false,
       "stock": 25
     },
     {
-      "id": "cap-7",
+      "id": "cap-10",
       "baseId": "cap-base-2",
       "category": "caps",
       "baseName": "SKULL CAP",
@@ -380,10 +308,10 @@
       "baseSalePrice": 32,
       "color": "red",
       "capType": "skull",
-      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
+      "image": "/images/skull_cap_red.jpg",
       "images": [
-        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
-        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80"
+        "/images/skull_cap_red.jpg",
+        "/images/skull_caps.jpg"
       ],
       "soldOut": false,
       "stock": 18

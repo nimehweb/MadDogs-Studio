@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Instagram, Mail, Youtube } from 'lucide-react';
+import { FaWhatsapp, FaXTwitter, FaPinterest } from 'react-icons/fa6';
 
 export function Footer() {
   return (
@@ -10,10 +11,10 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest mb-4">CONTACT</h3>
             <a
-              href="mailto:hello@yourbrand.com"
+              href="mailto:maddogstudio27@gmail.com"
               className="text-sm hover:opacity-60 transition-opacity"
             >
-              HELLO@YOURBRAND.COM
+              maddogstudio27@gmail.com
             </a>
           </div>
 
@@ -22,7 +23,7 @@ export function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-widest mb-4">FOLLOW</h3>
             <div className="flex items-center gap-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mad_dogstudios?igsh=MXd3eXg0c3JqMWJweQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -31,7 +32,7 @@ export function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@maddogstudios?_r=1&_t=ZS-94QiLY5qC0r"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
@@ -42,25 +43,31 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://youtube.com"
+                href="https://x.com/mad_dogstudio"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="YouTube"
+                aria-label="Twitter"
                 className="hover:opacity-60 transition-opacity"
               >
-                <Youtube size={20} />
+               <FaXTwitter size={20} />
               </a>
               <a
-                href="https://pinterest.com"
+                href="https://wa.me/08164297768"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="hover:opacity-60 transition-opacity"
+              >
+               <FaWhatsapp size={20} />
+              </a>
+              <a
+                href="https://pin.it/6zGk5EMDM"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Pinterest"
                 className="hover:opacity-60 transition-opacity"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
-                  <path d="M8 12a4 4 0 1 0 8 0" stroke="currentColor" strokeWidth="2" fill="none" />
-                </svg>
+                <FaPinterest size={20} />
               </a>
             </div>
           </div>
@@ -69,7 +76,7 @@ export function Footer() {
         {/* Bottom Text */}
         <div className="mt-12 pt-12 border-t border-black">
           <p className="text-xs uppercase tracking-widest text-gray-700">
-            © 2024 YOUR BRAND NAME. ALL RIGHTS RESERVED.
+            © 2024 MAD DOGS STUDIO . ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>

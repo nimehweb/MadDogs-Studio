@@ -18,7 +18,7 @@ export default function Info() {
               ABOUT US
             </h1>
             <p className="text-lg leading-relaxed mb-4">
-              YOUR BRAND NAME is a minimalist streetwear brand dedicated to quality basics and bold aesthetics. We believe in clean designs, premium materials, and timeless pieces that work for everyone.
+              MadDogs Studio is a minimalist streetwear brand dedicated to quality basics and bold aesthetics. We believe in clean designs, premium materials, and timeless pieces that work for everyone.
             </p>
             <p className="text-lg leading-relaxed">
               Each piece is carefully crafted to deliver both style and comfort, making them essential additions to any wardrobe.

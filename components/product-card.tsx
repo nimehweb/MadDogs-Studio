@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Product } from '@/lib/types';
 import { getColorName, getCapTypeName } from '@/lib/products';
+import Image from 'next/image';
 
 interface ProductCardProps {
   product: Product;
@@ -14,10 +15,11 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="cursor-pointer group">
         {/* Image Container */}
         <div className="relative aspect-square bg-gray-100 overflow-hidden mb-6">
-          <img
+          <Image
             src={product.image}
             alt={product.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
           />
           {/* Sold Out Badge */}
           {product.soldOut && (

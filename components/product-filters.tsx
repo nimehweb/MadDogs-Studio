@@ -3,6 +3,22 @@
 import { FilterState, ProductCategory } from '@/lib/types';
 import { getAvailableColors, getAvailableSleeveLengths, getAvailableCapTypes, getColorName, getCapTypeName } from '@/lib/products';
 import { Button } from '@/components/ui/button';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { ChevronDown } from 'lucide-react';
 
 interface ProductFiltersProps {
   filters: FilterState;
@@ -57,104 +73,139 @@ export function ProductFilters({ filters, onFilterChange }: ProductFiltersProps)
 
   return (
     <div className="w-full bg-white border-b border-black mb-8">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* Category Filter */}
-        <div className="py-6 border-b border-gray-200">
-          <h3 className="text-xs font-bold uppercase tracking-widest mb-4">Product Type</h3>
-          <div className="flex flex-wrap gap-3">
-            {['all', 'shirts', 'caps'].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => handleCategoryChange(cat as ProductCategory | 'all')}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black transition-colors ${
-                  filters.category === cat
-                    ? 'bg-black text-white'
-                    : 'bg-white text-black hover:bg-gray-100'
-                }`}
-              >
-                {cat === 'all' ? 'All' : cat === 'shirts' ? 'Shirts' : 'Caps'}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Color Filter */}
-        {availableColors.length > 0 && (
-          <div className="py-6 border-b border-gray-200">
-            <h3 className="text-xs font-bold uppercase tracking-widest mb-4">Color</h3>
-            <div className="flex flex-wrap gap-3">
-              {availableColors.map((color) => (
-                <button
-                  key={color}
-                  onClick={() => toggleColor(color)}
-                  className={`px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black transition-colors ${
-                    filters.colors.includes(color)
-                      ? 'bg-black text-white'
-                      : 'bg-white text-black hover:bg-gray-100'
-                  }`}
-                >
-                  {getColorName(color)}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Sleeve Length Filter (Shirts Only) */}
-        {(filters.category === 'all' || filters.category === 'shirts') && availableSleeveLengths.length > 0 && (
-          <div className="py-6 border-b border-gray-200">
-            <h3 className="text-xs font-bold uppercase tracking-widest mb-4">Sleeve Length</h3>
-            <div className="flex flex-wrap gap-3">
-              {availableSleeveLengths.map((length) => (
-                <button
-                  key={length}
-                  onClick={() => toggleSleeveLength(length)}
-                  className={`px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black transition-colors ${
-                    filters.sleeveLengths.includes(length)
-                      ? 'bg-black text-white'
-                      : 'bg-white text-black hover:bg-gray-100'
-                  }`}
-                >
-                  {length === 'short' ? 'Short Sleeve' : 'Long Sleeve'}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Cap Type Filter (Caps Only) */}
-        {(filters.category === 'all' || filters.category === 'caps') && availableCapTypes.length > 0 && (
-          <div className="py-6 border-b border-gray-200">
-            <h3 className="text-xs font-bold uppercase tracking-widest mb-4">Cap Type</h3>
-            <div className="flex flex-wrap gap-3">
-              {availableCapTypes.map((type) => (
-                <button
-                  key={type}
-                  onClick={() => toggleCapType(type)}
-                  className={`px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black transition-colors ${
-                    filters.capTypes.includes(type)
-                      ? 'bg-black text-white'
-                      : 'bg-white text-black hover:bg-gray-100'
-                  }`}
-                >
-                  {getCapTypeName(type)}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Clear Filters */}
-        {hasActiveFilters && (
-          <div className="py-6">
-            <Button
-              onClick={clearFilters}
-              className="text-xs font-bold uppercase tracking-wider border border-black bg-white text-black hover:bg-gray-100"
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
+        <div className="flex flex-wrap gap-4 items-center">
+          {/* Category Dropdown */}
+          <div className="flex flex-col gap-2">
+            <label className="text-xs font-bold uppercase tracking-widest">Product Type</label>
+            <Select
+              value={filters.category}
+              onValueChange={(value) => handleCategoryChange(value as ProductCategory | 'all')}
             >
-              Clear All Filters
-            </Button>
+              <SelectTrigger className="w-30 border-black">
+                <SelectValue placeholder="Select type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All</SelectItem>
+                <SelectItem value="shirts">Shirts</SelectItem>
+                <SelectItem value="caps">Caps</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
-        )}
+
+          {/* Color Dropdown */}
+          {availableColors.length > 0 && (
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-bold uppercase tracking-widest">Color</label>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="w-35 justify-between border-black bg-white hover:bg-gray-100"
+                  >
+                    {filters.colors.length > 0
+                      ? `${filters.colors.length} selected`
+                      : 'Select colors'}
+                    <ChevronDown className=" h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-35">
+                  <DropdownMenuLabel className="text-xs font-bold uppercase tracking-widest">Colors</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  {availableColors.map((color) => (
+                    <DropdownMenuCheckboxItem
+                      key={color}
+                      checked={filters.colors.includes(color)}
+                      onCheckedChange={() => toggleColor(color)}
+                    >
+                      {getColorName(color)}
+                    </DropdownMenuCheckboxItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          )}
+
+          {/* Sleeve Length Dropdown (Shirts Only) */}
+          {(filters.category === 'all' || filters.category === 'shirts') && availableSleeveLengths.length > 0 && (
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-bold uppercase tracking-widest">Sleeve Length</label>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="w-35 justify-between border-black bg-white hover:bg-gray-100"
+                  >
+                    {filters.sleeveLengths.length > 0
+                      ? `${filters.sleeveLengths.length} selected`
+                      : 'Select sleeve'}
+                    <ChevronDown className="ml-2 h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-35">
+                  <DropdownMenuLabel className="text-xs font-bold uppercase tracking-widest">Sleeve Length</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  {availableSleeveLengths.map((length) => (
+                    <DropdownMenuCheckboxItem
+                      key={length}
+                      checked={filters.sleeveLengths.includes(length)}
+                      onCheckedChange={() => toggleSleeveLength(length)}
+                    >
+                      {length === 'short' ? 'Short Sleeve' : 'Long Sleeve'}
+                    </DropdownMenuCheckboxItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          )}
+
+          {/* Cap Type Dropdown (Caps Only) */}
+          {(filters.category === 'all' || filters.category === 'caps') && availableCapTypes.length > 0 && (
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-bold uppercase tracking-widest">Cap Type</label>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="w-35 justify-between border-black bg-white hover:bg-gray-100"
+                  >
+                    {filters.capTypes.length > 0
+                      ? `${filters.capTypes.length} selected`
+                      : 'Select type'}
+                    <ChevronDown className="ml-2 h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-35">
+                  <DropdownMenuLabel className="text-xs font-bold uppercase tracking-widest">Cap Type</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  {availableCapTypes.map((type) => (
+                    <DropdownMenuCheckboxItem
+                      key={type}
+                      checked={filters.capTypes.includes(type)}
+                      onCheckedChange={() => toggleCapType(type)}
+                    >
+                      {getCapTypeName(type)}
+                    </DropdownMenuCheckboxItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          )}
+
+          {/* Clear Filters */}
+          {hasActiveFilters && (
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-bold uppercase tracking-widest invisible">Clear</label>
+              <Button
+                onClick={clearFilters}
+                variant="outline"
+                className="border-black bg-white text-black hover:bg-gray-100"
+              >
+                Clear All Filters
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -63,9 +63,11 @@ export const filterProducts = (filters: FilterState): Product[] => {
   });
 };
 
-export const getAvailableColors = (category?: ProductCategory): string[] => {
-  const filtered = category ? PRODUCTS.filter(p => p.category === category) : PRODUCTS;
-  const colors = new Set(filtered.map(p => p.color).filter(Boolean));
+export const getAvailableColors = (category?: ProductCategory | 'all'): string[] => {
+  const filtered = category && category !== 'all' 
+    ? PRODUCTS.filter(p => p.category === category) 
+    : PRODUCTS;
+  const colors = new Set(filtered.map(p => p.color).filter((c): c is string => Boolean(c)));
   return Array.from(colors);
 };
 
@@ -73,7 +75,7 @@ export const getAvailableSleeveLengths = (): string[] => {
   const sleeves = new Set(
     PRODUCTS.filter(p => p.category === 'shirts')
       .map(p => p.sleeveLength)
-      .filter(Boolean)
+      .filter((s): s is string => Boolean(s))
   );
   return Array.from(sleeves);
 };
@@ -82,13 +84,13 @@ export const getAvailableCapTypes = (): string[] => {
   const types = new Set(
     PRODUCTS.filter(p => p.category === 'caps')
       .map(p => p.capType)
-      .filter(Boolean)
+      .filter((t): t is string => Boolean(t))
   );
   return Array.from(types);
 };
 
 export const getColorName = (colorId: string): string => {
-  const color = productsData.colors.find(c => c.id === colorId);
+  const color = (productsData as any).colors?.find((c: any) => c.id === colorId);
   return color?.name || colorId;
 };
 

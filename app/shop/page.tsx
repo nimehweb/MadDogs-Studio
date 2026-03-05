@@ -25,9 +25,9 @@ export default function Shop() {
       <main className="flex-1 pt-24 md:pt-32">
         <ProductFilters filters={filters} onFilterChange={setFilters} />
 
-        <section className="py-8 md:py-12">
+        <section className="py-4 md:py-6">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-2">
               <h2 className="text-lg md:text-2xl font-black uppercase tracking-widest">
                 SHOP ALL
               </h2>
@@ -37,7 +37,7 @@ export default function Shop() {
             </div>
 
             {filteredProducts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
                 {filteredProducts.map((product) => (
                   <div key={product.id}>
                     <ProductGrid products={[product]} />

@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Product } from '@/lib/types';
 import { useCart } from '@/lib/cart-context';
 import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 
 interface ProductDetailProps {
   product: Product;
@@ -24,7 +26,17 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const price = product.salePrice || product.price;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+    <div>
+      {/* Back Button */}
+      <Link
+        href="/shop"
+        className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest mb-8 hover:opacity-60 transition-opacity"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back to Shop All
+      </Link>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
       {/* Image Gallery */}
       <div className="flex flex-col gap-4">
         {product.images.map((image, index) => (
@@ -201,6 +213,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </p>
           <p className="text-sm">{product.shippingInfo}</p>
         </div>
+      </div>
       </div>
     </div>
   );
