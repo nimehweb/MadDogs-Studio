@@ -43,9 +43,29 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
       {/* Product Info */}
       <div className="flex flex-col justify-start">
-        <h1 className="text-2xl md:text-3xl font-black uppercase tracking-widest mb-6 text-balance">
-          {product.name}
+        <h1 className="text-2xl md:text-3xl font-black uppercase tracking-widest mb-2 text-balance">
+          {product.baseName}
         </h1>
+        {(product.color || product.sleeveLength || product.capType) && (
+          <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest mb-6">
+            {product.color && (
+              <>
+                {product.color.charAt(0).toUpperCase() + product.color.slice(1)}
+                {product.sleeveLength || product.capType ? ' • ' : ''}
+              </>
+            )}
+            {product.sleeveLength && (
+              <>
+                {product.sleeveLength === 'short' ? 'Short Sleeve' : 'Long Sleeve'}
+              </>
+            )}
+            {product.capType && (
+              <>
+                {product.capType === 'face' ? 'Face Cap' : 'Skull Cap'}
+              </>
+            )}
+          </p>
+        )}
 
         {/* Price */}
         <div className="flex items-center gap-4 mb-8">

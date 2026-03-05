@@ -1,156 +1,37 @@
-import { Product } from './types';
+import { Product, FilterState, ProductCategory } from './types';
+import productsData from './products-v2.json';
 
-export const PRODUCTS: Product[] = [
-  {
-    id: '1',
-    name: 'OVERSIZED BASIC TEE',
-    price: 85,
-    salePrice: 59,
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
-      'https://images.unsplash.com/photo-1503341455253-b2b723bb4b1b?w=800&q=80',
-    ],
-    soldOut: false,
-    description: 'Essential oversized t-shirt in premium cotton. Perfect for layering or as a standalone piece.',
-    features: ['100% PREMIUM COTTON', 'OVERSIZED FIT', 'SCREEN PRINTED LOGO', 'REINFORCED SEAMS'],
-    modelHeight: '6\'0"',
-    modelSize: 'L',
-    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-  {
-    id: '2',
-    name: 'HEAVY DUTY CARGO PANTS',
-    price: 180,
-    salePrice: 135,
-    image: 'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=800&q=80',
-      'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=800&q=80',
-    ],
-    soldOut: false,
-    description: 'Bold cargo silhouette in durable canvas. Multiple utility pockets with reinforced stitching.',
-    features: ['CANVAS FABRIC', '8 POCKET DESIGN', 'ADJUSTABLE WAIST', 'HEAVY DUTY RIVETS'],
-    modelHeight: '6\'0"',
-    modelSize: '32',
-    sizes: ['28', '30', '32', '34', '36', '38'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-  {
-    id: '3',
-    name: 'TECHNICAL JACKET',
-    price: 240,
-    image: 'https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=800&q=80',
-      'https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=800&q=80',
-    ],
-    soldOut: false,
-    description: 'High-performance nylon jacket with water-resistant coating. Perfect for any weather.',
-    features: ['WATER RESISTANT', 'WINDPROOF', 'TAPED SEAMS', 'ADJUSTABLE HOOD'],
-    modelHeight: '6\'1"',
-    modelSize: 'M',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-  {
-    id: '4',
-    name: 'SLIM FIT HOODIE',
-    price: 95,
-    salePrice: 72,
-    image: 'https://images.unsplash.com/photo-1556821552-5c0d0eb5767a?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1556821552-5c0d0eb5767a?w=800&q=80',
-      'https://images.unsplash.com/photo-1556821552-5c0d0eb5767a?w=800&q=80',
-    ],
-    soldOut: false,
-    description: 'Classic slim-fit hoodie in soft cotton blend. Adjustable drawstring and kangaroo pocket.',
-    features: ['COTTON BLEND', 'SLIM FIT', 'ADJUSTABLE DRAWSTRING', 'KANGAROO POCKET'],
-    modelHeight: '5\'11"',
-    modelSize: 'M',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-  {
-    id: '5',
-    name: 'WIDE LEG DENIM',
-    price: 160,
-    image: 'https://images.unsplash.com/photo-1542192415-52e76422e885?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1542192415-52e76422e885?w=800&q=80',
-      'https://images.unsplash.com/photo-1542192415-52e76422e885?w=800&q=80',
-    ],
-    soldOut: false,
-    description: 'Premium dark wash denim with a relaxed wide-leg silhouette. Raw hemline detail.',
-    features: ['PREMIUM DENIM', 'WIDE LEG', 'RAW HEMLINE', 'VINTAGE WASH'],
-    modelHeight: '6\'0"',
-    modelSize: '32',
-    sizes: ['28', '30', '32', '34', '36'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-  {
-    id: '6',
-    name: 'STREET CAP',
-    price: 45,
-    salePrice: 35,
-    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80',
-      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80',
-    ],
-    soldOut: false,
-    description: 'Classic baseball cap with embroidered logo. Adjustable back closure for perfect fit.',
-    features: ['ADJUSTABLE CLOSURE', 'EMBROIDERED LOGO', 'CURVED BILL', 'UNSTRUCTURED'],
-    modelHeight: '6\'0"',
-    modelSize: 'ONE SIZE',
-    sizes: ['ONE SIZE'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-  {
-    id: '7',
-    name: 'ESSENTIAL CREW NECK',
-    price: 65,
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
-      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
-    ],
-    soldOut: true,
-    description: 'Timeless crew neck sweatshirt in premium fleece. Versatile neutral tone.',
-    features: ['PREMIUM FLEECE', 'CREW NECK', 'REINFORCED SEAMS', 'GENEROUS FIT'],
-    modelHeight: '5\'11"',
-    modelSize: 'L',
-    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-  {
-    id: '8',
-    name: 'TRACK SHORTS',
-    price: 55,
-    salePrice: 40,
-    image: 'https://images.unsplash.com/photo-1606701581784-bd24f78a29c8?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1606701581784-bd24f78a29c8?w=800&q=80',
-      'https://images.unsplash.com/photo-1606701581784-bd24f78a29c8?w=800&q=80',
-    ],
-    soldOut: false,
-    description: 'Lightweight nylon track shorts with side stripe detail. Perfect for warm weather.',
-    features: ['LIGHTWEIGHT NYLON', 'SIDE STRIPE', 'MESH LINING', 'DRAWSTRING WAIST'],
-    modelHeight: '6\'0"',
-    modelSize: 'M',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    shippingDays: '5-7 DAYS',
-    shippingInfo: 'Free domestic shipping on orders over $100. Standard shipping 5-7 business days.',
-  },
-];
+const transformProduct = (product: any): Product => {
+  return {
+    id: product.id,
+    baseId: product.baseId,
+    name: `${product.baseName} - ${product.color && (product.sleeveLength || product.capType)
+      ? `${product.color.charAt(0).toUpperCase() + product.color.slice(1)} ${product.sleeveLength === 'short' ? 'Short Sleeve' : product.sleeveLength === 'long' ? 'Long Sleeve' : product.capType === 'face' ? 'Face Cap' : 'Skull Cap'}`
+      : product.baseName}`,
+    price: product.basePrice,
+    salePrice: product.baseSalePrice,
+    image: product.image,
+    images: product.images,
+    soldOut: product.soldOut,
+    description: product.description,
+    features: product.features,
+    modelHeight: product.modelHeight,
+    modelSize: product.modelSize,
+    sizes: product.sizes,
+    shippingDays: product.shippingDays,
+    shippingInfo: product.shippingInfo,
+    category: product.category,
+    color: product.color,
+    sleeveLength: product.sleeveLength,
+    capType: product.capType,
+    stock: product.stock,
+    baseName: product.baseName,
+    basePrice: product.basePrice,
+    baseSalePrice: product.baseSalePrice,
+  };
+};
+
+export const PRODUCTS: Product[] = productsData.products.map(transformProduct);
 
 export const getProductById = (id: string): Product | undefined => {
   return PRODUCTS.find(product => product.id === id);
@@ -158,4 +39,60 @@ export const getProductById = (id: string): Product | undefined => {
 
 export const getFeaturedProducts = (): Product[] => {
   return PRODUCTS.slice(0, 4);
+};
+
+export const filterProducts = (filters: FilterState): Product[] => {
+  return PRODUCTS.filter(product => {
+    if (filters.category !== 'all' && product.category !== filters.category) {
+      return false;
+    }
+
+    if (filters.colors.length > 0 && !filters.colors.includes(product.color || '')) {
+      return false;
+    }
+
+    if (filters.sleeveLengths.length > 0 && product.sleeveLength && !filters.sleeveLengths.includes(product.sleeveLength)) {
+      return false;
+    }
+
+    if (filters.capTypes.length > 0 && product.capType && !filters.capTypes.includes(product.capType)) {
+      return false;
+    }
+
+    return true;
+  });
+};
+
+export const getAvailableColors = (category?: ProductCategory): string[] => {
+  const filtered = category ? PRODUCTS.filter(p => p.category === category) : PRODUCTS;
+  const colors = new Set(filtered.map(p => p.color).filter(Boolean));
+  return Array.from(colors);
+};
+
+export const getAvailableSleeveLengths = (): string[] => {
+  const sleeves = new Set(
+    PRODUCTS.filter(p => p.category === 'shirts')
+      .map(p => p.sleeveLength)
+      .filter(Boolean)
+  );
+  return Array.from(sleeves);
+};
+
+export const getAvailableCapTypes = (): string[] => {
+  const types = new Set(
+    PRODUCTS.filter(p => p.category === 'caps')
+      .map(p => p.capType)
+      .filter(Boolean)
+  );
+  return Array.from(types);
+};
+
+export const getColorName = (colorId: string): string => {
+  const color = productsData.colors.find(c => c.id === colorId);
+  return color?.name || colorId;
+};
+
+export const getCapTypeName = (typeId: string): string => {
+  const type = productsData.capTypes.find(c => c.id === typeId);
+  return type?.name || typeId;
 };

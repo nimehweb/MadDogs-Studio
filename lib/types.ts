@@ -1,5 +1,8 @@
+export type ProductCategory = 'shirts' | 'caps';
+
 export interface Product {
   id: string;
+  baseId?: string;
   name: string;
   price: number;
   salePrice?: number;
@@ -13,12 +16,39 @@ export interface Product {
   sizes: string[];
   shippingDays: string;
   shippingInfo: string;
+  category?: ProductCategory;
+  color?: string;
+  sleeveLength?: string;
+  capType?: string;
+  stock?: number;
+  baseName?: string;
+  basePrice?: number;
+  baseSalePrice?: number;
+}
+
+export interface Color {
+  id: string;
+  name: string;
+  hex: string;
+}
+
+export interface SleeveLength {
+  id: string;
+  name: string;
+}
+
+export interface CapType {
+  id: string;
+  name: string;
 }
 
 export interface CartItem {
   productId: string;
   quantity: number;
   size: string;
+  color?: string;
+  sleeveLength?: string;
+  capType?: string;
 }
 
 export interface CartContextType {
@@ -28,4 +58,11 @@ export interface CartContextType {
   updateQuantity: (productId: string, size: string, quantity: number) => void;
   clearCart: () => void;
   getTotal: () => number;
+}
+
+export interface FilterState {
+  category: ProductCategory | 'all';
+  colors: string[];
+  sleeveLengths: string[];
+  capTypes: string[];
 }

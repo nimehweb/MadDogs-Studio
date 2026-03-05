@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import { Product } from '@/lib/types';
+import { getColorName, getCapTypeName } from '@/lib/products';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const displayName = product.name;
+
   return (
     <Link href={`/product/${product.id}`}>
       <div className="cursor-pointer group">
@@ -24,13 +27,33 @@ export function ProductCard({ product }: ProductCardProps) {
               </div>
             </div>
           )}
+          {/* Variant Badges */}
+          <div className="absolute bottom-2 left-2 flex flex-wrap gap-2">
+            {product.sleeveLength && (
+              <span className="bg-black text-white px-2 py-1 text-xs font-bold uppercase tracking-wider">
+                {product.sleeveLength === 'short' ? 'Short' : 'Long'} Sleeve
+              </span>
+            )}
+            {product.capType && (
+              <span className="bg-black text-white px-2 py-1 text-xs font-bold uppercase tracking-wider">
+                {getCapTypeName(product.capType)}
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Product Info */}
         <div className="space-y-2">
-          <h3 className="text-xs md:text-sm font-black uppercase tracking-widest text-balance">
-            {product.name}
-          </h3>
+          <div>
+            <h3 className="text-xs md:text-sm font-black uppercase tracking-widest text-balance">
+              {product.baseName}
+            </h3>
+            {product.color && (
+              <p className="text-xs text-gray-600 uppercase tracking-widest">
+                {getColorName(product.color)}
+              </p>
+            )}
+          </div>
 
           {/* Price */}
           <div className="flex items-center gap-3">
