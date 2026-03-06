@@ -18,7 +18,7 @@ export default function Info() {
               ABOUT US
             </h1>
             <p className="text-lg leading-relaxed mb-4">
-              MadDogs Studio is a minimalist streetwear brand dedicated to quality basics and bold aesthetics. We believe in clean designs, premium materials, and timeless pieces that work for everyone.
+              <strong>MadDogs Studio</strong> is a minimalist streetwear brand dedicated to quality basics and bold aesthetics. We believe in clean designs, premium materials, and timeless pieces that work for everyone.
             </p>
             <p className="text-lg leading-relaxed">
               Each piece is carefully crafted to deliver both style and comfort, making them essential additions to any wardrobe.
@@ -40,7 +40,7 @@ export default function Info() {
               </div>
               <div>
                 <h3 className="font-bold uppercase tracking-wider mb-2">RETURNS</h3>
-                <p className="text-gray-700">30-day return policy on unworn items with tags attached. Contact hello@yourbrand.com for returns.</p>
+                <p className="text-gray-700">30-day return policy on unworn items with tags attached. Contact maddogstudio27@gmail.com for returns.</p>
               </div>
             </div>
           </section>
@@ -53,10 +53,10 @@ export default function Info() {
               Have questions? We'd love to hear from you.
             </p>
             <a
-              href="mailto:hello@yourbrand.com"
+              href="mailto:maddogstudio27@gmail.com"
               className="text-lg font-bold hover:opacity-60 transition-opacity"
             >
-              HELLO@YOURBRAND.COM
+              maddogstudio27@gmail.com
             </a>
           </section>
 

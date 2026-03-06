@@ -76,7 +76,7 @@ export function Footer() {
         {/* Bottom Text */}
         <div className="mt-12 pt-12 border-t border-black">
           <p className="text-xs uppercase tracking-widest text-gray-700">
-            © 2024 MAD DOGS STUDIO . ALL RIGHTS RESERVED.
+            © 2026 MAD DOGS STUDIO . ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>
