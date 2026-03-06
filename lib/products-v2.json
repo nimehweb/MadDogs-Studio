@@ -92,10 +92,10 @@
       "baseSalePrice": 35,
       "color": "Arctic blue",
       "capType": "face",
-      "image": "/images/artic_blue_cap_MD.png",
+      "image": "/images/cap_sky_blue_084953.jpeg",
       "images": [
-        "/images/artic_blue_cap_MD.png",
-        "/images/artic_blue_cap_MD.png"
+        "/images/cap_sky_blue_084953.jpeg",
+        "/images/cap_sky_blue_084953.jpeg"
       ],
       "soldOut": false,
       "stock": 40
@@ -116,10 +116,10 @@
       "baseSalePrice": 35,
       "color": "Navy blue",
       "capType": "face",
-      "image": "/images/Navy_blue_cap.png",
+      "image": "/images/cap_dark_blue_084944.jpeg",
       "images": [
-        "/images/Navy_blue_cap.png",
-        "/images/Navy_blue_cap.png"
+        "/images/cap_dark_blue_084944.jpeg",
+        "/images/cap_dark_blue_084944.jpeg"
       ],
       "soldOut": false,
       "stock": 35
@@ -140,10 +140,10 @@
       "baseSalePrice": 35,
       "color": "red",
       "capType": "face",
-      "image": "/images/red_cap.png",
+      "image": "/images/cap_red_084957.jpeg",
       "images": [
-        "/images/red_cap.png",
-        "/images/red_cap.png"
+        "/images/cap_red_084957.jpeg",
+        "/images/cap_red_084957.jpeg"
       ],
       "soldOut": false,
       "stock": 28
@@ -164,10 +164,10 @@
       "baseSalePrice": 35,
       "color": "Olive green",
       "capType": "face",
-      "image": "/images/Olive_green_cap.png",
+      "image": "/images/cap_army_grn_085001.jpeg",
       "images": [
-        "/images/Olive_green_cap.png",
-        "/images/Olive_green_cap.png"
+        "/images/cap_army_grn_085001.jpeg",
+        "/images/cap_army_grn_085001.jpeg"
       ],
       "soldOut": false,
       "stock": 28
@@ -188,10 +188,10 @@
       "baseSalePrice": 35,
       "color": "pink",
       "capType": "face",
-      "image": "/images/Pink_cap.png",
+      "image": "/images/cap_pink_084950.jpeg",
       "images": [
-        "/images/Pink_cap.png",
-        "/images/Pink_cap.png"
+        "/images/cap_pink_084950.jpeg",
+        "/images/cap_pink_084950.jpeg"
       ],
       "soldOut": false,
       "stock": 28
@@ -212,10 +212,10 @@
       "baseSalePrice": 35,
       "color": "Black",
       "capType": "face",
-      "image": "/images/Full_black_cap.png",
+      "image": "/images/cap_bl_085005.jpeg",
       "images": [
-        "/images/Full_black_cap.png",
-        "/images/Full_black_cap.png"
+        "/images/cap_bl_085005.jpeg",
+        "/images/cap_bl_085005.jpeg"
       ],
       "soldOut": false,
       "stock": 28
@@ -236,10 +236,10 @@
       "baseSalePrice": 35,
       "color": "white",
       "capType": "face",
-      "image": "/images/white_black_cap.png",
+      "image": "/images/cap_BnW_084934.jpeg",
       "images": [
-        "/images/white_black_cap.png",
-        "/images/white_black_cap.png"
+        "/images/cap_BnW_084934.jpeg",
+        "/images/cap_BnW_084934.jpeg"
       ],
       "soldOut": false,
       "stock": 28
@@ -260,10 +260,10 @@
       "baseSalePrice": 32,
       "color": "black",
       "capType": "skull",
-      "image": "/images/skull_cap_black.jpg",
+      "image": "/images/skull_cap_bl.jpeg",
       "images": [
-        "/images/skull_cap_black.jpg",
-        "/images/skull_caps.jpg"
+        "/images/skull_cap_bl.jpeg",
+        "/images/skull_cap_bl.jpeg"
       ],
       "soldOut": false,
       "stock": 32

@@ -8,26 +8,11 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'YOUR BRAND NAME - Streetwear',
+  title: 'Mad Dogs Studio',
   description: 'Minimalist streetwear. Bold aesthetics, quality basics.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+    icon: "/md_logo_black_081628.jpeg"
+    },
 }
 
 export default function RootLayout({

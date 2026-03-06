@@ -9,6 +9,38 @@ import { X } from 'lucide-react';
 export function CartPage() {
   const { items, removeFromCart, updateQuantity, getTotal } = useCart();
 
+  const handleCheckout = () => {
+    // Replace with your WhatsApp business number (include country code without + or spaces)
+    const whatsappNumber = '08164297768'; // e.g., '1234567890' for US, '447123456789' for UK
+    
+    // Build the cart message
+    let message = `Hey! 👋 I'd love to place an order with you guys.\n`;
+    message += "Here's what I'm looking to get:\n\n";
+    
+    items.forEach((item, index) => {
+      const product = getProductById(item.productId);
+      if (product) {
+        const price = product.salePrice || product.price;
+        const itemTotal = price * item.quantity;
+        
+        message += `${index + 1}. *${product.name}*\n`;
+        message += `   - Size: ${item.size}\n`;
+        message += `   - Quantity: ${item.quantity}\n`;
+        message += `   - $${price.toFixed(2)} each = $${itemTotal.toFixed(2)}\n\n`;
+      }
+    });
+    
+    const total = getTotal();
+    message += `That brings my total to *$${total.toFixed(2)}*\n\n`;
+    message += `Could you confirm if everything is available? Looking forward to hearing from you! 😊`;
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Open WhatsApp
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-20 md:py-32">
@@ -150,7 +182,10 @@ export function CartPage() {
             <div className="flex justify-between mb-6 text-gray-700 text-sm">
               <span>Shipping calculated at checkout</span>
             </div>
-            <Button className="w-full bg-black text-white hover:bg-gray-900 h-12 font-bold uppercase tracking-wider">
+            <Button 
+              onClick={handleCheckout}
+              className="w-full bg-black text-white hover:bg-gray-900 h-12 font-bold uppercase tracking-wider"
+            >
               PROCEED TO CHECKOUT
             </Button>
             <Button
